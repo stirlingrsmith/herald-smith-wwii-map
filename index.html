@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<!-- saved from url=(0041)file:///C:/Users/stirl/Downloads/map.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="color-scheme" content="light dark">
-<link rel="icon" href="data:,">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<meta name="color-scheme" content="light dark"/>
+<link rel="icon" href="data:,"/>
 <title>Herald Thomas Smith — Sapper to Rifleman: His Route, 1942–1946</title>
-<style data-leaflet-css="">
+<style data-leaflet-css>
 /* required styles */
 
 .leaflet-pane,
@@ -700,9 +700,15 @@ table{width:100%;border-collapse:collapse;font-size:15px} td{padding:6px 0;borde
 .map-layout{display:grid;grid-template-columns:1.25fr .95fr;gap:16px;align-items:start}
 #map{height:620px;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:var(--surface2)}
 #mapFallback{display:none;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px}
-.pin{width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-family:-apple-system,Segoe UI,sans-serif;font-size:12px;font-weight:700;border:2px solid #fff;box-shadow:0 1px 6px rgba(0,0,0,.35)}
+.pin{width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-family:-apple-system,Segoe UI,sans-serif;font-size:12px;font-weight:700;border:2px solid #fff;box-shadow:0 1px 6px rgba(0,0,0,.35);pointer-events:none;flex:none}
 .pin--on{background:var(--red);transform:scale(1.2)}
-.pin-wrap{background:none;border:none}
+.pin-wrap{background:none;border:none;display:flex;align-items:center;justify-content:center;pointer-events:auto!important;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:none}
+.leaflet-popup-content{margin:14px 16px}
+.pop-dates{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.pop h4{margin:2px 0 4px;font-size:16px;line-height:1.3;color:var(--ink)}
+.pop p{margin:0;font-size:13.5px;line-height:1.5;color:var(--ink)}
+.pop-jump{margin-top:10px;font-size:13.5px;padding:8px 12px;min-height:40px;border-radius:8px;border:1px solid var(--accent);background:var(--accent);color:#fff;cursor:pointer}
+@media(prefers-color-scheme:dark){.pop-jump{color:#141815}}
 #map{z-index:0}
 .leaflet-container{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
 .list-wrap{max-height:620px;overflow:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
@@ -753,7 +759,7 @@ footer{border-top:1px solid var(--line);margin-top:32px;padding-top:16px;font-si
 <body>
 <div class="wrap">
 <header class="hero">
-<div class="meta-line">Royal Canadian Engineers · Canadian Infantry Corps · Regina Rifle Regiment</div>
+<div class="meta-line">Royal Canadian Engineers &middot; Canadian Infantry Corps &middot; Regina Rifle Regiment</div>
 <h1>Herald Thomas Smith — <span>from Sapper to Rifleman</span>: his route, 1942–1946</h1>
 <p class="lede"><strong>What is a sapper?</strong> A sapper is a soldier of the engineers — the army’s builders and demolishers, who put up bridges, clear mines and obstacles, and build the roads the rest of the army moves on. In the Royal Canadian Engineers, <em>Sapper</em> is also a rank: the engineers’ equivalent of a private.</p>
 <p class="lede">Herald Thomas Smith (M-35398), born in Raymond, Alberta, enlisted in Calgary on <strong>10 March 1942</strong>. His discharge certificate names the 9th Field Company, but his full Record of Service — preserved in the family papers — tells a different story: he was with the 9th for about three weeks, in Canada, and never served with it overseas. This page follows <strong>his own trail</strong>: engineer training in Canada and England, the 33rd Field Company in Normandy, two hospitals, a transfer to the infantry, and finally the <strong>Regina Rifle Regiment</strong> — his fighting unit from November 1944 to the end of the war.</p>
@@ -771,7 +777,7 @@ footer{border-top:1px solid var(--line);margin-top:32px;padding-top:16px;font-si
 <div class="grid2">
 <section class="card"><h2>The soldier — from his papers</h2>
 <table>
-<tbody><tr><td>Name</td><td>Herald Thomas Smith</td></tr>
+<tr><td>Name</td><td>Herald Thomas Smith</td></tr>
 <tr><td>Service number</td><td>M-35398</td></tr>
 <tr><td>Born</td><td>15 January 1917, Raymond, Alberta</td></tr>
 <tr><td>Enlisted</td><td>10 March 1942, Calgary, Alberta — posted to the 9th Field Company, Royal Canadian Engineers</td></tr>
@@ -779,7 +785,7 @@ footer{border-top:1px solid var(--line);margin-top:32px;padding-top:16px;font-si
 <tr><td>Theatres</td><td>Canada, United Kingdom, Northwest Europe (Belgium, Netherlands, Germany)</td></tr>
 <tr><td>Discharged</td><td>22 January 1946, Calgary (No. 13 District Depot, CARO 1029) — honourable, demobilization</td></tr>
 <tr><td>Address on discharge</td><td>Box 817, Cardston, Alberta</td></tr>
-</tbody></table>
+</table>
 <p style="font-size:14.5px;color:var(--muted)">His war, in one line: basic training at Grande Prairie, engineer training at Chilliwack, overseas to the 1st Canadian Engineer Reinforcement Unit at Aldershot in September 1943, the 33rd Field Company in Normandy by July 1944, hospital and convalescence that summer, remustered to the infantry in September 1944, across to Belgium in October, and taken on strength of the Regina Rifle Regiment — 7th Canadian Infantry Brigade, 3rd Canadian Infantry Division — on 3 November 1944.</p>
 </section>
 <section class="card"><h2>Medals — and what they confirm</h2>
@@ -808,7 +814,7 @@ footer{border-top:1px solid var(--line);margin-top:32px;padding-top:16px;font-si
 </section>
 
 <h2 style="margin:26px 0 4px;font-size:26px">His route — interactive map &amp; timeline</h2>
-<p style="max-width:760px;color:var(--muted);margin-top:0">Every stop comes from his papers or from his unit’s movements while he was on its strength. Some pins are honest placeholders, and each one says so: four UK postings whose stations the record doesn’t give are plotted at Aldershot, his reinforcement unit’s home; the 1943 ports are blank on both forms (Halifax and Liverpool are the probable ports, not recorded ones); the Belgian port is not named (Ostend is inferred); and 18 Canadian General Hospital is plotted at Bayeux, where the Canadian general hospitals were concentrated, because its exact site isn’t verified.</p>
+<p style="max-width:760px;color:var(--muted);margin-top:0">Every stop comes from his papers or from his unit’s movements while he was on its strength. Some pins are honest placeholders, and each one says so: four UK postings whose stations the record doesn’t give are plotted around Aldershot, his reinforcement unit’s home, each pin nudged about a mile apart so none hides another; the 1943 ports are blank on both forms (Halifax and Liverpool are the probable ports, not recorded ones); the Belgian port is not named (Ostend is inferred); and 18 Canadian General Hospital is plotted at Bayeux, where the Canadian general hospitals were concentrated, because its exact site isn’t verified. The ship that brought him home — the <em>Queen Elizabeth</em>, as he told the family — has its own section just below the map.</p>
 
 <div class="filters sans" id="filters">
 <button data-f="all" class="active">All stops (31)</button>
@@ -822,12 +828,17 @@ footer{border-top:1px solid var(--line);margin-top:32px;padding-top:16px;font-si
 
 <div class="map-layout">
 <div>
-<div id="map" aria-label="Interactive map of Herald Thomas Smith's route" class="leaflet-container leaflet-touch leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0" style="position: relative;"><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 19; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" src="./index_files/1.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(227px, 219px, 0px); opacity: 1;"><img alt="" src="./index_files/0.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(227px, -37px, 0px); opacity: 1;"><img alt="" src="./index_files/1(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-29px, 219px, 0px); opacity: 1;"><img alt="" src="./index_files/1(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(483px, 219px, 0px); opacity: 1;"><img alt="" src="./index_files/2.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(227px, 475px, 0px); opacity: 1;"><img alt="" src="./index_files/0(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-29px, -37px, 0px); opacity: 1;"><img alt="" src="./index_files/0(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(483px, -37px, 0px); opacity: 1;"><img alt="" src="./index_files/2(1).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-29px, 475px, 0px); opacity: 1;"><img alt="" src="./index_files/2(2).png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(483px, 475px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-overlay-pane"><svg pointer-events="none" class="leaflet-zoom-animated" width="767" height="742" viewBox="-64 -62 767 742" style="transform: translate3d(-64px, -62px, 0px);"><g><path class="leaflet-interactive" stroke="#8b2e2e" stroke-opacity="0.75" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 4" fill="none" d="M159 306L145 286L136 314L302 333"></path><path class="leaflet-interactive" stroke="#8b2e2e" stroke-opacity="0.75" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 4" fill="none" d="M481 313L486 302L481 305L494 306L502 300L501 301L499 296L503 295L502 296"></path></g></svg></div><div class="leaflet-pane leaflet-shadow-pane"></div><div class="leaflet-pane leaflet-marker-pane"><div class="leaflet-marker-icon pin-wrap leaflet-zoom-animated leaflet-interactive" title="1. Calgary, Alberta" tabindex="0" role="button" style="margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(159px, 306px, 0px); z-index: 306;"><div class="pin">1</div></div><div class="leaflet-marker-icon pin-wrap leaflet-zoom-animated leaflet-interactive" title="2. Grande Prairie, Alberta" tabindex="0" role="button" style="margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(145px, 286px, 0px); z-index: 286;"><div class="pin">2</div></div><div class="leaflet-marker-icon pin-wrap leaflet-zoom-animated leaflet-interactive" title="3. Chilliwack, British Columbia" tabindex="0" role="button" style="margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(136px, 314px, 0px); z-index: 314;"><div class="pin">3</div></div><div class="leaflet-marker-icon pin-wrap leaflet-zoom-animated leaflet-interactive" title="4. Halifax, Nova Scotia — embarkation" tabindex="0" role="button" style="margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(302px, 333px, 0px); z-index: 333;"><div class="pin">4</div></div><div class="leaflet-marker-icon pin-wrap leaflet-zoom-animated leaflet-interactive" title="5. Liverpool, England — disembarkation" tabindex="0" role="button" style="margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(474px, 295px, 0px); z-index: 295;"><div class="pin">5</div></div><div class="leaflet-marker-icon pin-wrap leaflet-zoom-animated leaflet-interactive" title="6. Aldershot, England — 1 CERU" tabindex="0" role="button" style="margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(481px, 305px, 0px); z-index: 305;"><div class="pin">6</div></div><div class="leaflet-marker-icon pin-wrap leaflet-zoom-animated leaflet-interactive" title="7. 17 Canadian General Hospital, England" tabindex="0" role="button" style="margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(481px, 305px, 0px); z-index: 305;"><div class="pin">7</div></div><div class="leaflet-marker-icon pin-wrap leaflet-zoom-animated leaflet-interactive" title="8. 2nd Road Construction Company, RCE — UK" tabindex="0" role="button" style="margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(481px, 305px, 0px); z-index: 305;"><div class="pin">8</div></div><div class="leaflet-marker-icon pin-wrap leaflet-zoom-animated leaflet-interactive" title="9. 33rd Field Company, RCE — southern England" tabindex="0" role="button" style="margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(481px, 305px, 0px); z-index: 305;"><div class="pin">9</div></div><div class="leaflet-marker-icon pin-wrap leaflet-zoom-animated leaflet-interactive" title="10. Normandy bridgehead, France — 33rd Field Company" tabindex="0" role="button" style="margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(481px, 313px, 0px); z-index: 313;"><div class="pin">10</div></div><div class="leaflet-marker-icon pin-wrap leaflet-zoom-animated leaflet-interactive" title="11. Roman Way Convalescent Hospital, Colchester, Essex" tabindex="0" role="button" style="margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(486px, 302px, 0px); z-index: 302;"><div class="pin">11</div></div><div class="leaflet-marker-icon pin-wrap leaflet-zoom-animated leaflet-interactive" title="12. Aldershot, England — back to 1 CERU" tabindex="0" role="button" style="margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(481px, 305px, 0px); z-index: 305;"><div class="pin">12</div></div><div class="leaflet-marker-icon pin-wrap leaflet-zoom-animated leaflet-interactive" title="13. Rocky Mountain Rangers — UK" tabindex="0" role="button" style="margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(481px, 305px, 0px); z-index: 305;"><div class="pin">13</div></div><div class="leaflet-marker-icon pin-wrap leaflet-zoom-animated leaflet-interactive" title="14. England → Belgium" tabindex="0" role="button" style="margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(491px, 305px, 0px); z-index: 305;"><div class="pin">14</div></div><div class="leaflet-marker-icon pin-wrap leaflet-zoom-animated leaflet-interactive" title="15. X-4 List, CIC — Belgium" tabindex="0" role="button" style="margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(494px, 306px, 0px); z-index: 306;"><div class="pin">15</div></div><div class="leaflet-marker-icon pin-wrap leaflet-zoom-animated leaflet-interactive" title="16. Ghent, Belgium — joins the Regina Rifles" tabindex="0" role="button" style="margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(494px, 306px, 0px); z-index: 306;"><div class="pin">16</div></div><div class="leaflet-marker-icon pin-wrap leaflet-zoom-animated leaflet-interactive" title="17. Nijmegen salient, Netherlands" tabindex="0" role="button" style="margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(500px, 302px, 0px); z-index: 302;"><div class="pin">17</div></div><div class="leaflet-marker-icon pin-wrap leaflet-zoom-animated leaflet-interactive" title="18. Kleve / Reichswald, Germany — Operation Veritable" tabindex="0" role="button" style="margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(500px, 302px, 0px); z-index: 302;"><div class="pin">18</div></div><div class="leaflet-marker-icon pin-wrap leaflet-zoom-animated leaflet-interactive" title="19. Moyland Wood, Germany" tabindex="0" role="button" style="margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(501px, 302px, 0px); z-index: 302;"><div class="pin">19</div></div><div class="leaflet-marker-icon pin-wrap leaflet-zoom-animated leaflet-interactive" title="20. Rhineland reserve — Cleve–Goch area" tabindex="0" role="button" style="margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(500px, 302px, 0px); z-index: 302;"><div class="pin">20</div></div><div class="leaflet-marker-icon pin-wrap leaflet-zoom-animated leaflet-interactive" title="21. Rhine crossing — Emmerich / Hoch Elten, Germany" tabindex="0" role="button" style="margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(501px, 302px, 0px); z-index: 302;"><div class="pin">21</div></div><div class="leaflet-marker-icon pin-wrap leaflet-zoom-animated leaflet-interactive" title="22. Twente Canal, Netherlands" tabindex="0" role="button" style="margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(502px, 300px, 0px); z-index: 300;"><div class="pin">22</div></div><div class="leaflet-marker-icon pin-wrap leaflet-zoom-animated leaflet-interactive" title="23. Zutphen, Netherlands" tabindex="0" role="button" style="margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(501px, 301px, 0px); z-index: 301;"><div class="pin">23</div></div><div class="leaflet-marker-icon pin-wrap leaflet-zoom-animated leaflet-interactive" title="24. Deventer, Netherlands" tabindex="0" role="button" style="margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(501px, 300px, 0px); z-index: 300;"><div class="pin">24</div></div><div class="leaflet-marker-icon pin-wrap leaflet-zoom-animated leaflet-interactive" title="25. Leeuwarden, Netherlands" tabindex="0" role="button" style="margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(499px, 296px, 0px); z-index: 296;"><div class="pin">25</div></div><div class="leaflet-marker-icon pin-wrap leaflet-zoom-animated leaflet-interactive" title="26. Groningen / Delfzijl Pocket, Netherlands" tabindex="0" role="button" style="margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(503px, 295px, 0px); z-index: 295;"><div class="pin">26</div></div><div class="leaflet-marker-icon pin-wrap leaflet-zoom-animated leaflet-interactive" title="27. Northern Netherlands — the surrender" tabindex="0" role="button" style="margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(502px, 296px, 0px); z-index: 296;"><div class="pin">27</div></div><div class="leaflet-marker-icon pin-wrap leaflet-zoom-animated leaflet-interactive" title="28. Occupation duties, Northwest Europe" tabindex="0" role="button" style="margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(502px, 296px, 0px); z-index: 296;"><div class="pin">28</div></div><div class="leaflet-marker-icon pin-wrap leaflet-zoom-animated leaflet-interactive" title="29. Repatriation — Northwest Europe to Canada" tabindex="0" role="button" style="margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(502px, 296px, 0px); z-index: 296;"><div class="pin">29</div></div><div class="leaflet-marker-icon pin-wrap leaflet-zoom-animated leaflet-interactive" title="30. Calgary, Alberta — discharge" tabindex="0" role="button" style="margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(159px, 306px, 0px); z-index: 306;"><div class="pin">30</div></div><div class="leaflet-marker-icon pin-wrap leaflet-zoom-animated leaflet-interactive" title="31. Cardston, Alberta" tabindex="0" role="button" style="margin-left: -14px; margin-top: -14px; width: 28px; height: 28px; transform: translate3d(161px, 314px, 0px); z-index: 314;"><div class="pin">31</div></div></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(348.402px, 346.188px, 0px) scale(2);"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="file:///C:/Users/stirl/Downloads/map.html#" title="Zoom in" role="button" aria-label="Zoom in" aria-disabled="false"><span aria-hidden="true">+</span></a><a class="leaflet-control-zoom-out" href="file:///C:/Users/stirl/Downloads/map.html#" title="Zoom out" role="button" aria-label="Zoom out" aria-disabled="false"><span aria-hidden="true">−</span></a></div></div><div class="leaflet-top leaflet-right"></div><div class="leaflet-bottom leaflet-left"></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com/" title="A JavaScript library for interactive maps"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" class="leaflet-attribution-flag"><path fill="#4C7BE1" d="M0 0h12v4H0z"></path><path fill="#FFD500" d="M0 4h12v3H0z"></path><path fill="#E0BC00" d="M0 7h12v1H0z"></path></svg> Leaflet</a> <span aria-hidden="true">|</span> © <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap</a> contributors</div></div></div></div>
+<div id="map" aria-label="Interactive map of Herald Thomas Smith's route"></div>
 <div id="mapFallback"><h3>Map unavailable</h3><p>The interactive map could not load in this browser. The full timeline beside it lists every stop in order, with dates and what he was doing there.</p></div>
-<p class="sans" style="font-size:12.5px;color:var(--muted)">The lines join his stops in order — across Canada (Calgary to Halifax) and through Europe (Normandy to the Delfzijl Pocket). Use the filters above to focus the list; the map keeps the full route for context.</p>
+<p class="sans" style="font-size:12.5px;color:var(--muted)">The lines join his stops in order — across Canada (Calgary to Halifax) and through Europe (Normandy to the Delfzijl Pocket). Use the filters above to focus the list; the map keeps the full route for context. Where several stops share the same place — Aldershot, Calgary, Ghent and a few others — their pins are spread about a mile apart so every numbered pin can be seen and tapped; the route lines still join the true places. Zoom in to see the spread-out pins clearly. Tap or click any numbered pin and a card pops up with that stop — dates, place and what he was doing there — with a button that jumps to the stop in the timeline.</p>
 </div>
-<div class="list-wrap" id="stopList" aria-label="Timeline of stops"><div class="stop" data-phase="canada"><div class="dates">Stop 1 · 10 Mar – 10 Apr 1942</div><h4>Calgary, Alberta</h4><p>Enlisted 10 Mar 1942 and posted to the 9th Field Company, RCE — his only time with that unit, and it was in Canada. He was struck off on transfer to Grande Prairie on 10 Apr 1942, long before the 9th went overseas.</p><span class="phase-tag">Canada 1942–43</span></div><div class="stop" data-phase="canada"><div class="dates">Stop 2 · 10 Apr – 14 Dec 1942</div><h4>Grande Prairie, Alberta</h4><p>Basic training at C.A.(B) Training Centre No. 132. Acting lance-corporal 15 May 1942, acting corporal 27 Aug 1942; reverted to Private on posting out, 14 Dec 1942.</p><span class="phase-tag">Canada 1942–43</span></div><div class="stop" data-phase="canada"><div class="dates">Stop 3 · 15 Dec 1942 – 20 Aug 1943</div><h4>Chilliwack, British Columbia</h4><p>RCE Training Centre “A6”. Qualified on Junior NCO Course #16 on 26 May 1943 and was appointed lance-corporal with pay on 29 May 1943. Struck off strength to the Canadian Army Overseas on 20 Aug 1943.</p><span class="phase-tag">Canada 1942–43</span></div><div class="stop" data-phase="canada"><div class="dates">Stop 4 · 26 Aug 1943</div><h4>Halifax, Nova Scotia — embarkation</h4><p>Embarked in Canada 26 Aug 1943; both of his forms agree on the date but leave the port blank. Halifax is the probable port — not a recorded one.</p><span class="phase-tag">Canada 1942–43</span></div><div class="stop" data-phase="uk"><div class="dates">Stop 5 · 2 Sep 1943</div><h4>Liverpool, England — disembarkation</h4><p>Disembarked in the UK on 2 Sep 1943. The port is not stated on his forms; Liverpool is the probable port.</p><span class="phase-tag">Britain — the engineers</span></div><div class="stop" data-phase="uk"><div class="dates">Stop 6 · 2 Sep 1943 – 17 Mar 1944</div><h4>Aldershot, England — 1 CERU</h4><p>1st Canadian Engineer Reinforcement Unit, at Guillemont/Warburg Barracks — the RCE reinforcement holding and training unit. Acting corporal on arrival, 2 Sep 1943. His UK base, on and off, until March 1944.</p><span class="phase-tag">Britain — the engineers</span></div><div class="stop" data-phase="uk"><div class="dates">Stop 7 · 1 – 29 Nov 1943</div><h4>17 Canadian General Hospital, England</h4><p>Admitted to 17 Canadian General Hospital on 1 Nov 1943 and discharged on 29 Nov 1943. The hospital’s exact site is not established — this pin sits at Aldershot as a placeholder, not as a location.</p><span class="phase-tag">Britain — the engineers</span></div><div class="stop" data-phase="uk"><div class="dates">Stop 8 · 18 Feb – 1 Mar 1944</div><h4>2nd Road Construction Company, RCE — UK</h4><p>Attached to the 2nd Road Construction Company for all purposes, 18–29 Feb 1944 — a GHQ / Line of Communication Troops unit. Its UK station is not established; this pin is a placeholder at Aldershot.</p><span class="phase-tag">Britain — the engineers</span></div><div class="stop" data-phase="uk"><div class="dates">Stop 9 · 18 Mar – late Jun 1944</div><h4>33rd Field Company, RCE — southern England</h4><p>Taken on strength of the 33rd Field Company (2nd Canadian Army Troops Engineers) from 1 CERU on 18 Mar 1944. (His Part II form’s reporting unit reads “38 Fd” — no Canadian 38th Field Company existed in the UK then; almost certainly a clerk’s slip for the 33rd.) Awarded his 1st Good Conduct Badge, effective 10 Mar 1944. The company’s UK station is not established; this pin is a placeholder at Aldershot.</p><span class="phase-tag">Britain — the engineers</span></div><div class="stop" data-phase="normandy"><div class="dates">Stop 10 · Early Jul – 21 Jul 1944</div><h4>Normandy bridgehead, France — 33rd Field Company</h4><p>The 33rd Field Company was in Normandy with the 21st Army Group by 5 Jul 1944, when he was admitted to 18 Canadian General Hospital. He reverted to Sapper on 14 Jul 1944, while in hospital. The company’s own Normandy landing date is not verified, and 18 CGH’s exact site isn’t either — Canadian general hospitals were concentrated around Bayeux, so the pin is approximate.</p><span class="phase-tag">Normandy &amp; hospital</span></div><div class="stop" data-phase="normandy"><div class="dates">Stop 11 · 21 Jul – 18 Aug 1944</div><h4>Roman Way Convalescent Hospital, Colchester, Essex</h4><p>Transferred to the Canadian convalescent hospital at Roman Way, Colchester, on 21 Jul 1944 — evacuated from Normandy back to England. Discharged on 18 Aug 1944.</p><span class="phase-tag">Normandy &amp; hospital</span></div><div class="stop" data-phase="uk"><div class="dates">Stop 12 · 18/19 Aug – 2 Sep 1944</div><h4>Aldershot, England — back to 1 CERU</h4><p>Taken on strength of 1 CERU again on discharge from Roman Way — 18 Aug on one form, 19 Aug on the other — and carried on the Y-3 list while his next posting was decided.</p><span class="phase-tag">Britain — the engineers</span></div><div class="stop" data-phase="uk"><div class="dates">Stop 13 · 2 Sep – 12 Oct 1944</div><h4>Rocky Mountain Rangers — UK</h4><p>Posted out of the Engineers to the Rocky Mountain Rangers (1st Battalion) on 2 Sep 1944 — an infantry regiment from Kamloops, BC, then in England as a training/reinforcement battalion in the 13th Canadian Infantry Brigade, being broken up to reinforce under-strength units. His rank is now Private. Seven days’ privilege leave from 28 Sep 1944. The battalion’s UK station is recorded only as “A.41” and is unresolved; this pin is a placeholder at Aldershot.</p><span class="phase-tag">Britain — the engineers</span></div><div class="stop" data-phase="belgium"><div class="dates">Stop 14 · 16 – 17 Oct 1944</div><h4>England → Belgium</h4><p>Struck off to the X-4 List, Canadian Infantry Corps (11th Battalion), effective 12 Oct 1944. Embarked in England 16 Oct and disembarked in Belgium 17 Oct 1944. The port is not named on his record; Ostend is inferred.</p><span class="phase-tag">Belgium — reinforcement stream</span></div><div class="stop" data-phase="belgium"><div class="dates">Stop 15 · 17 Oct – 3 Nov 1944</div><h4>X-4 List, CIC — Belgium</h4><p>An unposted infantry reinforcement on the X-4 List, in the 2nd Canadian Base Reinforcement Group stream, awaiting a posting to a front-line battalion. The exact camp is not on his record; this pin is a placeholder in the Ghent area.</p><span class="phase-tag">Belgium — reinforcement stream</span></div><div class="stop" data-phase="regina"><div class="dates">Stop 16 · 3 Nov 1944</div><h4>Ghent, Belgium — joins the Regina Rifles</h4><p>Taken on strength of the Regina Rifle Regiment from the X-4 List on 3 Nov 1944; his rank becomes Rifleman. The regiment — 7th Canadian Infantry Brigade, 3rd Canadian Infantry Division — had finished clearing the Breskens Pocket the day before. This was his fighting unit for the rest of the war.</p><span class="phase-tag">With the Regina Rifles</span></div><div class="stop" data-phase="regina"><div class="dates">Stop 17 · 8 Nov 1944 – 8 Feb 1945</div><h4>Nijmegen salient, Netherlands</h4><p>A static winter on the Waal/Maas front — patrolling and sniping in the Nijmegen salient for about three months.</p><span class="phase-tag">With the Regina Rifles</span></div><div class="stop" data-phase="regina"><div class="dates">Stop 18 · 8 – 15 Feb 1945</div><h4>Kleve / Reichswald, Germany — Operation Veritable</h4><p>The regiment advanced through the Reichswald and Cleve riding in Kangaroo armoured personnel carriers; the Waal Flats fighting ran 8–15 Feb 1945.</p><span class="phase-tag">With the Regina Rifles</span></div><div class="stop" data-phase="regina"><div class="dates">Stop 19 · 16 – 21 Feb 1945</div><h4>Moyland Wood, Germany</h4><p>Five days clearing German paratroopers from Moyland Wood — fighting the regiment rated as bad as Normandy, with heavy battle-exhaustion casualties.</p><span class="phase-tag">With the Regina Rifles</span></div><div class="stop" data-phase="regina"><div class="dates">Stop 20 · 22 Feb – 27 Mar 1945</div><h4>Rhineland reserve — Cleve–Goch area</h4><p>Out of action in reserve during Operation Blockbuster. (Approximate position.)</p><span class="phase-tag">With the Regina Rifles</span></div><div class="stop" data-phase="regina"><div class="dates">Stop 21 · 27 Mar – 1 Apr 1945</div><h4>Rhine crossing — Emmerich / Hoch Elten, Germany</h4><p>Moved out on the evening of 27 Mar 1945 and crossed the Rhine by pontoon bridge (Operation Plunder); the Emmerich–Hoch Elten fighting ran 28 Mar – 1 Apr 1945.</p><span class="phase-tag">With the Regina Rifles</span></div><div class="stop" data-phase="regina"><div class="dates">Stop 22 · 2 – 4 Apr 1945</div><h4>Twente Canal, Netherlands</h4><p>The crossing of the Twente Canal, 2–4 Apr 1945. (Approximate position.)</p><span class="phase-tag">With the Regina Rifles</span></div><div class="stop" data-phase="regina"><div class="dates">Stop 23 · 6 – 8 Apr 1945</div><h4>Zutphen, Netherlands</h4><p>Zutphen, 6–8 Apr 1945.</p><span class="phase-tag">With the Regina Rifles</span></div><div class="stop" data-phase="regina"><div class="dates">Stop 24 · 8 – 11 Apr 1945</div><h4>Deventer, Netherlands</h4><p>Deventer was cleared on 11 Apr 1945.</p><span class="phase-tag">With the Regina Rifles</span></div><div class="stop" data-phase="regina"><div class="dates">Stop 25 · 15 – 19 Apr 1945</div><h4>Leeuwarden, Netherlands</h4><p>The 7th Brigade moved north through Leeuwarden toward Groningen.</p><span class="phase-tag">With the Regina Rifles</span></div><div class="stop" data-phase="regina"><div class="dates">Stop 26 · 19 Apr – 2 May 1945</div><h4>Groningen / Delfzijl Pocket, Netherlands</h4><p>The 7th Brigade took over at Groningen on 19 Apr; the Regina Rifles cleared north and north-west toward the North Sea — the Delfzijl Pocket, 23 Apr – 2 May 1945.</p><span class="phase-tag">With the Regina Rifles</span></div><div class="stop" data-phase="regina"><div class="dates">Stop 27 · 5 – 8 May 1945</div><h4>Northern Netherlands — the surrender</h4><p>German forces in the Netherlands surrendered on 5 May 1945; VE Day followed on 8 May. (Approximate position — the regiment was in the Groningen/Delfzijl area.)</p><span class="phase-tag">With the Regina Rifles</span></div><div class="stop" data-phase="home"><div class="dates">Stop 28 · May – 25 Oct 1945</div><h4>Occupation duties, Northwest Europe</h4><p>Occupation duties with the Regina Rifles until repatriation. His casualty form carries no dated entries in this window — normal, since it records only changes — so the regiment’s exact occupation station is not on his record; this pin is a placeholder.</p><span class="phase-tag">Occupation &amp; home</span></div><div class="stop" data-phase="home"><div class="dates">Stop 29 · 25 Oct – 2 Dec 1945</div><h4>Repatriation — Northwest Europe to Canada</h4><p>Struck off strength of the Regina Rifles on 25 Oct 1945; taken on strength of the repatriation organization (“564 CO–MD 13”) on 26 Oct; struck off strength of the Canadian Army Overseas on 2 Dec 1945.</p><span class="phase-tag">Occupation &amp; home</span></div><div class="stop" data-phase="home"><div class="dates">Stop 30 · 3 Dec 1945 – 22 Jan 1946</div><h4>Calgary, Alberta — discharge</h4><p>Taken on strength from the Canadian Army Overseas at No. 13 District Depot, Calgary, on 3 Dec 1945; reported for duty 11 Dec; discharge leave 11 Dec 1945 – 15 Jan 1946; discharged on 22 Jan 1946 under CARO 1029, rank Rifleman.</p><span class="phase-tag">Occupation &amp; home</span></div><div class="stop" data-phase="home"><div class="dates">Stop 31 · Home</div><h4>Cardston, Alberta</h4><p>Home. His address on discharge: Box 817, Cardston, Alberta.</p><span class="phase-tag">Occupation &amp; home</span></div></div>
+<div class="list-wrap" id="stopList" aria-label="Timeline of stops"></div>
 </div>
+
+
+<section style="margin-top:34px"><h2 style="font-size:26px;margin-bottom:4px">Home on the <em>Queen Elizabeth</em></h2>
+<p style="max-width:820px">Herald told his family he sailed on RMS <em>Queen Elizabeth</em>: <strong>he came back from England on her.</strong> The dates in his papers fit that homecoming well.</p>
+</section>
 
 
 <section class="after-war" style="margin-top:34px"><h2 style="font-size:26px;margin-bottom:4px">After the war</h2>
@@ -846,7 +857,7 @@ footer{border-top:1px solid var(--line);margin-top:32px;padding-top:16px;font-si
 <h3 class="watch-group">His regiment — the Regina Rifles on D-Day</h3>
 <p style="max-width:760px;color:var(--muted);margin-top:0;font-size:15px">Smith joined the regiment five months after D-Day, but this is the battalion he served in — and the landing its men never forgot.</p>
 <div class="watch-grid">
-<div class="video-card"><span class="kind">Wartime footage · 1944</span><h4>Canadian Army Newsreel No. 33 — “The Great Crusader”</h4><p>Juno Beach, 6 June 1944. CFPU cameraman Bud Roos accompanied the Regina Rifles; fixed cameras on the landing craft show the infantry wading ashore. <a href="https://www.youtube.com/watch?v=EBWxVZ4mDyM&amp;list=PL04CC43B7CD63C686&amp;index=34" rel="noopener">Watch on YouTube</a></p></div>
+<div class="video-card"><span class="kind">Wartime footage · 1944</span><h4>Canadian Army Newsreel No. 33 — “The Great Crusader”</h4><p>Juno Beach, 6 June 1944. CFPU cameraman Bud Roos accompanied the Regina Rifles; fixed cameras on the landing craft show the infantry wading ashore. <a href="https://www.youtube.com/watch?v=EBWxVZ4mDyM&list=PL04CC43B7CD63C686&index=34" rel="noopener">Watch on YouTube</a></p></div>
 <div class="video-card"><span class="kind">Documentary · 2024</span><h4>Operation Calvados: The Documentary</h4><p>The Royal Regina Rifles Trust’s film about the regiment on D-Day, with interviews and archival footage, made for the 80th anniversary and the statue unveiled at Bretteville-l’Orgueilleuse on 5 June 2024. It premiered in Regina in November 2024 and has no public stream yet — check the Trust for screenings or streaming: <a href="https://www.rrrtrust.org/events-2-1" rel="noopener">rrrtrust.org</a></p></div>
 <div class="video-card"><span class="kind">Audio · podcast</span><h4>Juno Beach Centre — “Canada’s D-Day Story”</h4><p>Includes an interview with Arnott England, a Regina Rifle Regiment veteran who landed at Juno Beach and fought through Normandy, France, Belgium, Holland and into Germany — almost the same path Smith later followed. <a href="https://www.junobeach.org/podcast/canadas-d-day-story/" rel="noopener">Listen at junobeach.org</a></p></div>
 </div>
@@ -873,14 +884,14 @@ footer{border-top:1px solid var(--line);margin-top:32px;padding-top:16px;font-si
 <h3 class="watch-group">The Rhine crossing — 27 March – 1 April 1945</h3>
 <div class="watch-grid">
 <div class="video-card"><div class="embed-wrap"><a class="embed-play" href="https://www.youtube.com/watch?v=fdNBnHEZmM0" aria-label="Watch on YouTube: Operation Varsity — RAF documentary, Part 1"><span class="play-badge" aria-hidden="true"><span class="tri"></span></span><span class="play-label">Watch on YouTube</span></a></div><span class="kind">Wartime documentary</span><h4>Operation Varsity — RAF documentary, Part 1</h4><p>The airborne drop across the Rhine, the air side of the crossing Smith’s regiment made by pontoon bridge days later (stop 21). <a href="https://www.youtube.com/watch?v=fdNBnHEZmM0" rel="noopener">Watch on YouTube</a></p></div>
-<div class="video-card"><span class="kind">Documentary · National Film Board</span><h4>Canada Remembers, Part Three: Endings and Beginnings</h4><p>Veterans’ memories alongside front-line footage, from the Rhine crossing through VE Day. Streams free at the NFB: <a href="https://www.nfb.ca/film/canada_remembers_part_three_edu/" rel="noopener">NFB.ca — Canada Remembers, Part Three</a></p></div>
+<div class="video-card"><span class="kind">Documentary · National Film Board</span><h4>Canada Remembers, Part Three: Endings and Beginnings</h4><p>Veterans’ memories alongside front-line footage, from the Rhine crossing through VE Day. Streams free at the NFB: <a href="https://www.NFB.ca/film/canada_remembers_part_three_edu/" rel="noopener">NFB.ca — Canada Remembers, Part Three</a></p></div>
 <div class="video-card"><span class="kind">Reading</span><h4>“Winning With Reinforcements” — Legion Magazine</h4><p>Includes the Melville Bridge: Canadian engineers began a 1,373-foot Bailey bridge at Emmerich on 31 March 1945, the day after Smith’s regiment cleared the town — and notes the 7th Brigade lost 485 men, a third of its rifle strength, at Moyland Wood. <a href="https://legionmagazine.com/winning-with-reinforcements/" rel="noopener">Read at legionmagazine.com</a></p></div>
 </div>
 
 <h3 class="watch-group">Liberation of the Netherlands — April–May 1945</h3>
 <p style="max-width:760px;color:var(--muted);margin-top:0;font-size:15px">Zutphen, Deventer, Groningen and the Delfzijl Pocket (stops 23–27) — the part of his war Dutch families still commemorate.</p>
 <div class="watch-grid">
-<div class="video-card"><div class="embed-wrap"><a class="embed-play" href="https://www.youtube.com/watch?v=wt9Os-i_haU&amp;t=69s" aria-label="Watch on YouTube: Canadian Army Newsreel No. 70 — the Battle of Groningen"><span class="play-badge" aria-hidden="true"><span class="tri"></span></span><span class="play-label">Watch on YouTube</span></a></div><span class="kind">Wartime footage · 1945</span><h4>Canadian Army Newsreel No. 70 — the Battle of Groningen</h4><p>The 2nd Canadian Division’s four-day street battle for the city, 13–16 April 1945; Smith’s regiment was fighting just north of the city at the same time. <a href="https://www.youtube.com/watch?v=wt9Os-i_haU&amp;t=69s" rel="noopener">Watch on YouTube</a></p></div>
+<div class="video-card"><div class="embed-wrap"><a class="embed-play" href="https://www.youtube.com/watch?v=wt9Os-i_haU&t=69s" aria-label="Watch on YouTube: Canadian Army Newsreel No. 70 — the Battle of Groningen"><span class="play-badge" aria-hidden="true"><span class="tri"></span></span><span class="play-label">Watch on YouTube</span></a></div><span class="kind">Wartime footage · 1945</span><h4>Canadian Army Newsreel No. 70 — the Battle of Groningen</h4><p>The 2nd Canadian Division’s four-day street battle for the city, 13–16 April 1945; Smith’s regiment was fighting just north of the city at the same time. <a href="https://www.youtube.com/watch?v=wt9Os-i_haU&t=69s" rel="noopener">Watch on YouTube</a></p></div>
 <div class="video-card"><div class="embed-wrap"><a class="embed-play" href="https://www.youtube.com/watch?v=JCWANopglXI" aria-label="Watch on YouTube: The Canadians in Holland — The Canadian Encyclopedia"><span class="play-badge" aria-hidden="true"><span class="tri"></span></span><span class="play-label">Watch on YouTube</span></a></div><span class="kind">Documentary short</span><h4>The Canadians in Holland — The Canadian Encyclopedia</h4><p>A short film companion to the Encyclopedia’s feature on the liberation. <a href="https://thecanadianencyclopedia.ca/en/article/one-more-river-to-cross-the-canadians-in-holland-feature" rel="noopener">Read the article</a> · <a href="https://www.youtube.com/watch?v=JCWANopglXI" rel="noopener">Watch on YouTube</a></p></div>
 <div class="video-card"><span class="kind">Wartime footage · 1945</span><h4>Canadian armour in Groningen, just after the liberation</h4><p>Archival 8&nbsp;mm footage of Canadian armour in the newly freed city; a Badger flame-thrower troop appears at about 19:50. <a href="https://youtu.be/qz_G4_zLJuo?t=1186" rel="noopener">Watch on YouTube</a></p></div>
 <div class="video-card"><span class="kind">Wartime footage · 1945 · colourised</span><h4>The Netherlands celebrating liberation</h4><p>A colourised Canadian newsreel from 1945: Dutch civilians celebrating in the streets, and collaborators being dealt with, in the days after the liberation Smith’s regiment helped finish. <a href="https://www.youtube.com/watch?v=JNfZkq82c70" rel="noopener">Watch on YouTube</a></p></div>
@@ -912,6 +923,7 @@ footer{border-top:1px solid var(--line);margin-top:32px;padding-top:16px;font-si
 <li>1st Canadian Engineer Reinforcement Unit, Aldershot (CMEA) — <a href="https://cmea-agmc.ca/node/15231" rel="noopener">cmea-agmc.ca/node/15231</a></li>
 <li>Gordon Brown &amp; Terry Copp, <em>Look to Your Front: Regina Rifles, A Regiment at War 1944–1945</em> (regimental history).</li>
 <li>33rd Field Company war diaries: Library and Archives Canada, reels T-18591 (2 Mar – 30 Nov 1944) and T-18592 (1 Dec 1944 – 4 Oct 1945).</li>
+<li>Requesting a full Second World War service file — Library and Archives Canada — <a href="https://library-archives.canada.ca/eng/collection/research-help/military-heritage/second-world-war/pages/personnel-records-second-world-war.aspx" rel="noopener">library-archives.canada.ca — personnel records</a></li>
 </ul>
 <p style="font-size:14.5px;color:var(--muted)"><strong>Next step if you want the remaining gaps closed:</strong> request his full service file from Library and Archives Canada and the war diaries above — together they can show the unknown UK stations, the ports, and where he personally was within the regiment’s route.</p>
 </section>
@@ -919,7 +931,7 @@ footer{border-top:1px solid var(--line);margin-top:32px;padding-top:16px;font-si
 <footer>Compiled Oct 2026 from his Record of Service and Service and Casualty Form, supplied by the family. Approximate and placeholder positions are labelled as such at each stop.</footer>
 </div>
 
-<script data-leaflet-js="">
+<script data-leaflet-js>
 /* @preserve
  * Leaflet 1.9.4, a JS library for interactive maps. https://leafletjs.com
  * (c) 2010-2023 Vladimir Agafonkin, (c) 2010-2011 CloudMade
@@ -957,8 +969,8 @@ var STOPS=[
 {n:26,phase:"regina",dates:"19 Apr – 2 May 1945",place:"Groningen / Delfzijl Pocket, Netherlands",lat:53.33,lng:6.92,note:"The 7th Brigade took over at Groningen on 19 Apr; the Regina Rifles cleared north and north-west toward the North Sea — the Delfzijl Pocket, 23 Apr – 2 May 1945."},
 {n:27,phase:"regina",dates:"5 – 8 May 1945",place:"Northern Netherlands — the surrender",lat:53.22,lng:6.57,note:"German forces in the Netherlands surrendered on 5 May 1945; VE Day followed on 8 May. (Approximate position — the regiment was in the Groningen/Delfzijl area.)"},
 {n:28,phase:"home",dates:"May – 25 Oct 1945",place:"Occupation duties, Northwest Europe",lat:53.22,lng:6.57,note:"Occupation duties with the Regina Rifles until repatriation. His casualty form carries no dated entries in this window — normal, since it records only changes — so the regiment’s exact occupation station is not on his record; this pin is a placeholder."},
-{n:29,phase:"home",dates:"25 Oct – 2 Dec 1945",place:"Repatriation — Northwest Europe to Canada",lat:53.22,lng:6.57,note:"Struck off strength of the Regina Rifles on 25 Oct 1945; taken on strength of the repatriation organization (“564 CO–MD 13”) on 26 Oct; struck off strength of the Canadian Army Overseas on 2 Dec 1945."},
-{n:30,phase:"home",dates:"3 Dec 1945 – 22 Jan 1946",place:"Calgary, Alberta — discharge",lat:51.05,lng:-114.07,note:"Taken on strength from the Canadian Army Overseas at No. 13 District Depot, Calgary, on 3 Dec 1945; reported for duty 11 Dec; discharge leave 11 Dec 1945 – 15 Jan 1946; discharged on 22 Jan 1946 under CARO 1029, rank Rifleman."},
+{n:29,phase:"home",dates:"25 Oct – 2 Dec 1945",place:"Repatriation — Northwest Europe to Canada",lat:53.22,lng:6.57,note:"Struck off strength of the Regina Rifles on 25 Oct 1945; taken on strength of the repatriation organization (“564 CO–MD 13”) on 26 Oct; struck off strength of the Canadian Army Overseas on 2 Dec 1945. That 2 Dec date fits boarding in England that day for the voyage home on RMS Queen Elizabeth — see ‘Home on the Queen Elizabeth’ below the map."},
+{n:30,phase:"home",dates:"3 Dec 1945 – 22 Jan 1946",place:"Calgary, Alberta — discharge",lat:51.05,lng:-114.07,note:"Taken on strength from the Canadian Army Overseas at No. 13 District Depot, Calgary, on 3 Dec 1945 — a paper transfer made the day after embarkation, while he was still at sea on the way home; reported for duty 11 Dec; discharge leave 11 Dec 1945 – 15 Jan 1946; discharged on 22 Jan 1946 under CARO 1029, rank Rifleman."},
 {n:31,phase:"home",dates:"Home",place:"Cardston, Alberta",lat:49.20,lng:-113.30,note:"Home. His address on discharge: Box 817, Cardston, Alberta."}
 ];
 var PHASE_LABEL={canada:"Canada 1942–43",uk:"Britain — the engineers",normandy:"Normandy & hospital",belgium:"Belgium — reinforcement stream",regina:"With the Regina Rifles",home:"Occupation & home"};
@@ -969,6 +981,22 @@ var rows=STOPS.map(function(s){
   listEl.appendChild(d); return d;
 });
 var places=STOPS.map(function(s){return {label:s.place,lat:s.lat,lng:s.lng};});
+function offsetCoord(lat,lng,dxM,dyM){var dLat=dyM/111320;var cosLat=Math.cos(lat*Math.PI/180);var dLng=dxM/(111320*Math.max(cosLat,0.2));return {lat:lat+dLat,lng:lng+dLng};}
+var markerPlaces=(function(){
+  var groups={};
+  places.forEach(function(p,i){var k=p.lat.toFixed(5)+','+p.lng.toFixed(5);(groups[k]=groups[k]||[]).push(i);});
+  var out=places.map(function(p){return {label:p.label,lat:p.lat,lng:p.lng};});
+  Object.keys(groups).forEach(function(k){
+    var idxs=groups[k]; if(idxs.length<2)return;
+    for(var j=1;j<idxs.length;j++){
+      var angle=(j-1)*(Math.PI*2/(idxs.length-1))-Math.PI/2;
+      var r=1600;
+      var c=offsetCoord(places[idxs[j]].lat,places[idxs[j]].lng,Math.cos(angle)*r,Math.sin(angle)*r);
+      out[idxs[j]].lat=c.lat; out[idxs[j]].lng=c.lng;
+    }
+  });
+  return out;
+})();
 var canadaLeg=STOPS.filter(function(s){return s.n>=1&&s.n<=4;});
 var euroLeg=STOPS.filter(function(s){return s.n>=10&&s.n<=27;});
 function legFeature(list){return {type:"Feature",properties:{},geometry:{type:"LineString",coordinates:list.map(function(s){return [s.lng,s.lat];})}};}
@@ -981,31 +1009,143 @@ function showFallback(){document.getElementById('map').style.display='none';docu
 var leafletMap=null;
 var markers=[];
 var selectedIdx=null;
-function pinIcon(i,sel){return L.divIcon({className:'pin-wrap',html:'<div class="pin'+(sel?' pin--on':'')+'">'+(i+1)+'</div>',iconSize:[28,28],iconAnchor:[14,14]});}
+function pinIcon(i,sel){return L.divIcon({className:'pin-wrap',html:'<div class="pin'+(sel?' pin--on':'')+'">'+(i+1)+'</div>',iconSize:[44,44],iconAnchor:[22,22],popupAnchor:[0,-16]});}
+function popHtml(i){
+  var s=STOPS[i];
+  return '<div class="pop"><div class="pop-dates">Stop '+s.n+' &middot; '+s.dates+'</div><h4>'+s.place+'</h4><p>'+s.note+'</p><button type="button" class="pop-jump sans" data-jump="'+i+'">Show this stop in the timeline</button></div>';
+}
+function scrollListTo(i){
+  var c=listEl, row=rows[i]; if(!c||!row)return;
+  var cr=c.getBoundingClientRect(), rr=row.getBoundingClientRect();
+  if(rr.top<cr.top||rr.bottom>cr.bottom){c.scrollTop+=(rr.top-cr.top)-8;}
+}
+var lastTap={i:-1,t:0};
+var stopPopup=null;
+var popupIdx=-1;
+function activateStop(i,pan){
+  if(leafletMap&&markers[i]&&!(stopPopup&&popupIdx===i&&leafletMap.hasLayer(stopPopup))){
+    try{
+      if(!stopPopup){stopPopup=L.popup({maxWidth:300,closeButton:true,closePopupOnClick:false,autoPanPadding:[28,28]});}
+      popupIdx=i;
+      stopPopup.setLatLng(markers[i].getLatLng()).setContent(popHtml(i)).openOn(leafletMap);
+    }catch(e){}
+  }
+  selectStop(i,pan);
+  scrollListTo(i);
+}
+function attachDomTap(m,i){
+  m.on('add',function(){
+    var el=m.getElement(); if(!el||el._tapWired)return; el._tapWired=true;
+    el.addEventListener('click',function(){activateStop(i,false);});
+    var sx=0,sy=0;
+    el.addEventListener('touchstart',function(ev){if(ev.touches&&ev.touches.length===1){sx=ev.touches[0].clientX;sy=ev.touches[0].clientY;}},{passive:true});
+    el.addEventListener('touchend',function(ev){
+      var t=ev.changedTouches&&ev.changedTouches[0]; if(!t)return;
+      if(Math.abs(t.clientX-sx)>12||Math.abs(t.clientY-sy)>12)return;
+      setTimeout(function(){
+        if(popupIdx===i&&stopPopup&&leafletMap&&leafletMap.hasLayer(stopPopup))return;
+        if(lastTap.i===i&&(Date.now()-lastTap.t)<900)return;
+        activateStop(i,false);
+      },300);
+    },{passive:true});
+  });
+}
 function selectStop(i,pan){
   selectedIdx=i;
-  markers.forEach(function(m,j){m.setIcon(pinIcon(j,j===i));});
+  markers.forEach(function(m,j){m.setIcon(pinIcon(j,j===i)); if(m.setZIndexOffset){m.setZIndexOffset(j===i?1000:0);}});
   rows.forEach(function(r,j){r.classList.toggle('map-selected',j===i);});
   if(pan&&leafletMap&&markers[i]){leafletMap.panTo(markers[i].getLatLng());}
 }
+var TILE_PROVIDERS=[
+  {url:'https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',opts:{maxZoom:19,attribution:'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'}},
+  {url:'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png',opts:{maxZoom:20,subdomains:'abcd',attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions" rel="noopener">CARTO</a>'}},
+  {url:'https://tile.openstreetmap.org/{z}/{x}/{y}.png',opts:{maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap</a> contributors'}},
+  {url:'https://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}',opts:{maxZoom:19,attribution:'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'}},
+  {url:'https://tile.openstreetmap.de/{z}/{x}/{y}.png',opts:{maxZoom:18,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap</a> contributors'}},
+  {url:'https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png',opts:{maxZoom:17,subdomains:'abc',attribution:'Map data: &copy; <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap</a> contributors, SRTM | Map style: &copy; <a href="https://opentopomap.org" rel="noopener">OpenTopoMap</a> (CC-BY-SA)'}}
+];
+var tileProviderIdx=0;
+var tileLayer=null;
+var tileLoads=0;
+var tileErrors=0;
+var tileSwitchTimer=null;
+function showMapNotice(){
+  var fb=document.getElementById('mapFallback');
+  if(fb){fb.innerHTML='<h3>Map background is having trouble loading</h3><p>The numbered pins and route lines above should still show, and tapping a pin still works. If the background stays blank on this computer, a browser add-on or security filter blocking map pictures is the usual cause &mdash; trying a different browser often fixes it. The full timeline beside the map lists every stop in order, with dates and what he was doing there.</p>'; fb.style.display='block';}
+}
+function scheduleTileSwitch(delay){
+  if(tileSwitchTimer)clearTimeout(tileSwitchTimer);
+  tileSwitchTimer=setTimeout(function(){
+    tileSwitchTimer=null;
+    if(tileLoads>0&&tileErrors<=tileLoads+8)return;
+    if(tileProviderIdx<TILE_PROVIDERS.length-1){addTileLayer(tileProviderIdx+1);}
+    else if(tileLoads===0){showMapNotice();}
+  },delay||3000);
+}
+function addTileLayer(idx){
+  if(!leafletMap||typeof L==='undefined')return;
+  tileProviderIdx=idx; tileLoads=0; tileErrors=0;
+  if(tileLayer){try{leafletMap.removeLayer(tileLayer);}catch(e){}}
+  var prov=TILE_PROVIDERS[idx];
+  tileLayer=L.tileLayer(prov.url,prov.opts);
+  tileLayer.on('tileload',function(){tileLoads++; if(tileLoads===1){var fb=document.getElementById('mapFallback'); if(fb)fb.style.display='none';}});
+  tileLayer.on('tileerror',function(){tileErrors++; if(tileLoads===0&&tileErrors>=3){scheduleTileSwitch(700);} else if(tileErrors>tileLoads+8){scheduleTileSwitch(1500);}});
+  tileLayer.addTo(leafletMap);
+  scheduleTileSwitch();
+}
+function refreshMapSize(){
+  if(!leafletMap)return;
+  try{leafletMap.invalidateSize();}
+  catch(e){}
+  if(tileLayer&&tileLoads===0){try{tileLayer.redraw();}catch(e){}}
+}
+var refreshTimer=null;
+function refreshMapSizeSoon(delay){
+  if(refreshTimer)clearTimeout(refreshTimer);
+  refreshTimer=setTimeout(refreshMapSize,delay||250);
+}
 function mountMap(){
   if(typeof L==='undefined'){showFallback();return;}
+  if(leafletMap){refreshMapSizeSoon(100);return;}
   try{
-    leafletMap=L.map('map');
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap</a> contributors'}).addTo(leafletMap);
-    var routeOpts={color:'#8b2e2e',weight:2.5,opacity:0.75,dashArray:'5 4'};
+    leafletMap=L.map('map',{worldCopyJump:true,tapTolerance:25});
+    addTileLayer(0);
+    var routeOpts={color:'#8b2e2e',weight:2.5,opacity:0.75,dashArray:'5 4',interactive:false};
     L.polyline(canadaLeg.map(function(s){return [s.lat,s.lng];}),routeOpts).addTo(leafletMap);
     L.polyline(euroLeg.map(function(s){return [s.lat,s.lng];}),routeOpts).addTo(leafletMap);
-    markers=places.map(function(p,i){
-      var m=L.marker([p.lat,p.lng],{icon:pinIcon(i,false),title:(i+1)+'. '+p.label}).addTo(leafletMap);
-      m.on('click',function(){selectStop(i,false);rows[i].scrollIntoView({block:'nearest'});});
+    markers=markerPlaces.map(function(p,i){
+      var m=L.marker([p.lat,p.lng],{icon:pinIcon(i,false),title:(i+1)+'. '+p.label,keyboard:false}).addTo(leafletMap);
+      m.on('click',function(){lastTap={i:i,t:Date.now()};activateStop(i,false);});
+      attachDomTap(m,i);
       return m;
     });
-    rows.forEach(function(row,i){row.addEventListener('click',function(){selectStop(i,true);});});
-    leafletMap.fitBounds(L.latLngBounds(places.map(function(p){return [p.lat,p.lng];})).pad(0.04));
+    rows.forEach(function(row,i){row.addEventListener('click',function(){activateStop(i,true);});});
+    leafletMap.fitBounds(L.latLngBounds(markerPlaces.map(function(p){return [p.lat,p.lng];})).pad(0.04));
+    setTimeout(refreshMapSize,120);
+    setTimeout(refreshMapSize,700);
+    setTimeout(refreshMapSize,1800);
   }catch(e){showFallback();}
 }
 mountMap();
+document.getElementById('map').addEventListener('click',function(ev){
+  var b=ev.target&&ev.target.closest?ev.target.closest('[data-jump]'):null; if(!b)return;
+  var i=parseInt(b.getAttribute('data-jump'),10); if(isNaN(i)||!rows[i])return;
+  if(leafletMap){try{leafletMap.closePopup();}catch(e){}}
+  selectStop(i,false);
+  rows[i].scrollIntoView({block:'center'});
+});
+window.addEventListener('resize',function(){refreshMapSizeSoon(250);});
+window.addEventListener('orientationchange',function(){refreshMapSizeSoon(350);});
+window.addEventListener('pageshow',function(ev){
+  if(!leafletMap){mountMap();return;}
+  refreshMapSizeSoon(150);
+  if(ev&&ev.persisted&&tileLayer){setTimeout(function(){try{tileLayer.redraw();}catch(e){} refreshMapSize();},450);}
+});
+document.addEventListener('visibilitychange',function(){if(!document.hidden){refreshMapSizeSoon(200);}});
+if(typeof ResizeObserver!=='undefined'){
+  var mapEl=document.getElementById('map');
+  if(mapEl){var ro=new ResizeObserver(function(){refreshMapSizeSoon(200);}); ro.observe(mapEl);}
+}
 document.getElementById('filters').addEventListener('click',function(ev){
   var b=ev.target.closest('button'); if(!b)return;
   document.querySelectorAll('#filters button').forEach(function(x){x.classList.remove('active');}); b.classList.add('active');
@@ -1015,7 +1155,7 @@ document.getElementById('filters').addEventListener('click',function(ev){
 </script>
 
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photograph, full size">
-<button class="lb-close" id="lbClose" aria-label="Close full-size photograph">×</button>
+<button class="lb-close" id="lbClose" aria-label="Close full-size photograph">&times;</button>
 <figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>
 </div>
 <script>
@@ -1031,6 +1171,5 @@ document.getElementById('filters').addEventListener('click',function(ev){
   document.addEventListener('keydown',function(ev){if(ev.key==='Escape'&&lb.classList.contains('open'))close();});
 })();
 </script>
-
-
-</body></html>
+</body>
+</html>
