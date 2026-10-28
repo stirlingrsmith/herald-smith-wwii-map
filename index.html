@@ -703,12 +703,6 @@ table{width:100%;border-collapse:collapse;font-size:15px} td{padding:6px 0;borde
 .pin{width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;font-family:-apple-system,Segoe UI,sans-serif;font-size:12px;font-weight:700;border:2px solid #fff;box-shadow:0 1px 6px rgba(0,0,0,.35);pointer-events:none;flex:none}
 .pin--on{background:var(--red);transform:scale(1.2)}
 .pin-wrap{background:none;border:none;display:flex;align-items:center;justify-content:center;pointer-events:auto!important;cursor:pointer;-webkit-tap-highlight-color:transparent;touch-action:none}
-.leaflet-popup-content{margin:14px 16px}
-.pop-dates{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);font-weight:700}
-.pop h4{margin:2px 0 4px;font-size:16px;line-height:1.3;color:var(--ink)}
-.pop p{margin:0;font-size:13.5px;line-height:1.5;color:var(--ink)}
-.pop-jump{margin-top:10px;font-size:13.5px;padding:8px 12px;min-height:40px;border-radius:8px;border:1px solid var(--accent);background:var(--accent);color:#fff;cursor:pointer}
-@media(prefers-color-scheme:dark){.pop-jump{color:#141815}}
 #map{z-index:0}
 .leaflet-container{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
 .list-wrap{max-height:620px;overflow:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
@@ -830,7 +824,7 @@ footer{border-top:1px solid var(--line);margin-top:32px;padding-top:16px;font-si
 <div>
 <div id="map" aria-label="Interactive map of Herald Thomas Smith's route"></div>
 <div id="mapFallback"><h3>Map unavailable</h3><p>The interactive map could not load in this browser. The full timeline beside it lists every stop in order, with dates and what he was doing there.</p></div>
-<p class="sans" style="font-size:12.5px;color:var(--muted)">The lines join his stops in order — across Canada (Calgary to Halifax) and through Europe (Normandy to the Delfzijl Pocket). Use the filters above to focus the list; the map keeps the full route for context. Where several stops share the same place — Aldershot, Calgary, Ghent and a few others — their pins are spread about a mile apart so every numbered pin can be seen and tapped; the route lines still join the true places. Zoom in to see the spread-out pins clearly. Tap or click any numbered pin and a card pops up with that stop — dates, place and what he was doing there — with a button that jumps to the stop in the timeline.</p>
+<p class="sans" style="font-size:12.5px;color:var(--muted)">The lines join his stops in order — across Canada (Calgary to Halifax) and through Europe (Normandy to the Delfzijl Pocket). Use the filters above to focus the list; the map keeps the full route for context. Where several stops share the same place — Aldershot, Calgary, Ghent and a few others — their pins are spread about a mile apart so every numbered pin can be seen and tapped; the route lines still join the true places. Zoom in to see the spread-out pins clearly. Tap or click any numbered pin to jump straight to that stop in the timeline, where its dates, place and what he was doing there are listed.</p>
 </div>
 <div class="list-wrap" id="stopList" aria-label="Timeline of stops"></div>
 </div>
@@ -1012,29 +1006,27 @@ function showFallback(){document.getElementById('map').style.display='none';docu
 var leafletMap=null;
 var markers=[];
 var selectedIdx=null;
-function pinIcon(i,sel){return L.divIcon({className:'pin-wrap',html:'<div class="pin'+(sel?' pin--on':'')+'">'+(i+1)+'</div>',iconSize:[44,44],iconAnchor:[22,22],popupAnchor:[0,-16]});}
-function popHtml(i){
-  var s=STOPS[i];
-  return '<div class="pop"><div class="pop-dates">Stop '+s.n+' &middot; '+s.dates+'</div><h4>'+s.place+'</h4><p>'+s.note+'</p><button type="button" class="pop-jump sans" data-jump="'+i+'">Show this stop in the timeline</button></div>';
-}
+function pinIcon(i,sel){return L.divIcon({className:'pin-wrap',html:'<div class="pin'+(sel?' pin--on':'')+'">'+(i+1)+'</div>',iconSize:[44,44],iconAnchor:[22,22]});}
 function scrollListTo(i){
   var c=listEl, row=rows[i]; if(!c||!row)return;
   var cr=c.getBoundingClientRect(), rr=row.getBoundingClientRect();
   if(rr.top<cr.top||rr.bottom>cr.bottom){c.scrollTop+=(rr.top-cr.top)-8;}
 }
 var lastTap={i:-1,t:0};
-var stopPopup=null;
-var popupIdx=-1;
 function activateStop(i,pan){
-  if(leafletMap&&markers[i]&&!(stopPopup&&popupIdx===i&&leafletMap.hasLayer(stopPopup))){
-    try{
-      if(!stopPopup){stopPopup=L.popup({maxWidth:300,closeButton:true,closePopupOnClick:false,autoPanPadding:[28,28]});}
-      popupIdx=i;
-      stopPopup.setLatLng(markers[i].getLatLng()).setContent(popHtml(i)).openOn(leafletMap);
-    }catch(e){}
+  if(rows[i]&&rows[i].style.display==='none'){
+    rows.forEach(function(r){r.style.display='';});
+    document.querySelectorAll('#filters button').forEach(function(x){x.classList.toggle('active',x.dataset.f==='all');});
   }
   selectStop(i,pan);
   scrollListTo(i);
+  if(!pan){
+    var row=rows[i];
+    if(row&&window.matchMedia&&window.matchMedia('(max-width: 860px)').matches){
+      try{row.scrollIntoView({block:'start'});}catch(e){row.scrollIntoView();}
+      setTimeout(function(){scrollListTo(i);},60);
+    }
+  }
 }
 function attachDomTap(m,i){
   m.on('add',function(){
@@ -1046,7 +1038,6 @@ function attachDomTap(m,i){
       var t=ev.changedTouches&&ev.changedTouches[0]; if(!t)return;
       if(Math.abs(t.clientX-sx)>12||Math.abs(t.clientY-sy)>12)return;
       setTimeout(function(){
-        if(popupIdx===i&&stopPopup&&leafletMap&&leafletMap.hasLayer(stopPopup))return;
         if(lastTap.i===i&&(Date.now()-lastTap.t)<900)return;
         activateStop(i,false);
       },300);
@@ -1130,13 +1121,6 @@ function mountMap(){
   }catch(e){showFallback();}
 }
 mountMap();
-document.getElementById('map').addEventListener('click',function(ev){
-  var b=ev.target&&ev.target.closest?ev.target.closest('[data-jump]'):null; if(!b)return;
-  var i=parseInt(b.getAttribute('data-jump'),10); if(isNaN(i)||!rows[i])return;
-  if(leafletMap){try{leafletMap.closePopup();}catch(e){}}
-  selectStop(i,false);
-  rows[i].scrollIntoView({block:'center'});
-});
 window.addEventListener('resize',function(){refreshMapSizeSoon(250);});
 window.addEventListener('orientationchange',function(){refreshMapSizeSoon(350);});
 window.addEventListener('pageshow',function(ev){
