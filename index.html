@@ -1169,6 +1169,18 @@ document.getElementById('filters').addEventListener('click',function(ev){
 });
 </script>
 
+<style>#pageViews{color:#8f8a76}@media(prefers-color-scheme:dark){#pageViews{color:#7c847a}}</style>
+<div id="pageViews" aria-hidden="true" style="text-align:center;font-size:11px;letter-spacing:.15em;padding:6px 0 26px"></div>
+<script>
+(function(){
+  var el=document.getElementById('pageViews');
+  if(!el||!window.fetch){return;}
+  fetch('https://abacus.jasoncameron.dev/hit/stirlingrsmith.github.io/herald-smith-wwii-map')
+    .then(function(r){return r.json();})
+    .then(function(d){if(d&&typeof d.value==='number'){el.textContent=d.value.toLocaleString('en-CA');}})
+    .catch(function(){});
+})();
+</script>
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photograph, full size">
 <button class="lb-close" id="lbClose" aria-label="Close full-size photograph">&times;</button>
 <figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>
